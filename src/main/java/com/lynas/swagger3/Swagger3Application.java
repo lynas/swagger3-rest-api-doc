@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import springfox.documentation.annotations.ApiIgnore;
 
 @SpringBootApplication
 public class Swagger3Application {
@@ -13,6 +14,7 @@ public class Swagger3Application {
     }
 
     @Controller
+    @ApiIgnore
     public static class ApiController {
         @GetMapping("/")
         public String api() {
